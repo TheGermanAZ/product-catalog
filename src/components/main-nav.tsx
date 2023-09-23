@@ -72,8 +72,14 @@ export const MainNav = () => {
                   </Link>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/apparel/women" title="Women"></ListItem>
-              <ListItem href="/apparel/children" title="Children"></ListItem>
+              <ListItem
+                href="/apparel/women"
+                title="Women's Clothing"
+              ></ListItem>
+              <ListItem
+                href="/apparel/children"
+                title="Children's Clothing"
+              ></ListItem>
               <ListItem
                 href="/apparel/accessories"
                 title="Accessories"
