@@ -1,11 +1,11 @@
 export interface Product {
   id: string;
   name: string;
-  description: string;
-  isFeatured: boolean;
-  category: Category;
-  size: Size;
-  color: Color;
+  // description: string;
+  // isFeatured: boolean;
+  // category: Category;
+  // size: Size;
+  // color: Color;
   price: number;
   image: Image[];
 }
