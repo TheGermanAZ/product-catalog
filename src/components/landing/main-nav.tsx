@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import { Category } from "../../types";
+import { Category } from "../../../types";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -56,7 +57,7 @@ export const MainNav = () => {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger>Apparel</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -86,7 +87,7 @@ export const MainNav = () => {
               ></ListItem>
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
           <NavigationMenuTrigger>Golf Clubs</NavigationMenuTrigger>
           <NavigationMenuContent>

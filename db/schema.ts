@@ -21,7 +21,7 @@ export var posts = mysqlTable(
   {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 200 }).notNull(),
-    price: smallint("price").notNull(),
+    price: varchar("price", { length: 50 }).notNull(),
     imageref: varchar("imageref", { length: 200 }).notNull(),
   },
   (example) => ({
