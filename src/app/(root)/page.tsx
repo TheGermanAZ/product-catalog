@@ -1,6 +1,8 @@
+import Bag from "@/components/landing/bag";
 import Category from "@/components/landing/category";
 import { Footer } from "@/components/landing/footer";
 import { Navbar } from "@/components/landing/navbar";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {
@@ -32,15 +34,16 @@ export default function Home() {
               options from our recent fall release while they&apos;re still in
               stock.
             </p>
-            <a
-              href="#"
-              className="mt-8 inline-block rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+            <Button
+              className="mt-8 rounded-md border border-transparent px-8 py-3 text-base font-medium text-gray-100 hover:bg-zinc-800"
+              variant="default"
             >
               Shop New Arrivals
-            </a>
+            </Button>
           </div>
         </div>
         <Category />
+        <Bag />
       </main>
       <Footer />
     </>
