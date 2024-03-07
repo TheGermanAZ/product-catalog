@@ -7,6 +7,8 @@ import {
   timestamp,
   varchar,
 } from "drizzle-orm/mysql-core";
+import { drizzle } from "drizzle-orm/planetscale-serverless";
+import mysql from "mysql2/promise";
 
 /**
  * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
@@ -28,3 +30,6 @@ export var posts = mysqlTable(
     nameIndex: index("name_idx").on(example.name),
   })
 );
+
+export type Post = typeof posts.$inferSelect;
+export type NewPost = typeof posts.$inferInsert;

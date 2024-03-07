@@ -1,7 +1,4 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/tPLejb7kXQc
- */
+
 import { Button } from "@/components/ui/button";
 import { Card } from "../ui/card";
 

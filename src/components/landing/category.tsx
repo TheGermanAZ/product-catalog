@@ -1,7 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/uZ7hL4d2yvG
- */
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
@@ -28,7 +24,7 @@ export default function Category() {
             }}
             width="160"
           />
-          <span className="text-lg font-semibold">New Arrivals</span>
+          <span className="text-lg font-semibold">Woods</span>
         </Card>
         <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
           <Image
@@ -42,7 +38,7 @@ export default function Category() {
             }}
             width="160"
           />
-          <span className="text-lg font-semibold">Productivity</span>
+          <span className="text-lg font-semibold">Irons</span>
         </Card>
         <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
           <Image
@@ -56,7 +52,7 @@ export default function Category() {
             }}
             width="160"
           />
-          <span className="text-lg font-semibold">Workspace</span>
+          <span className="text-lg font-semibold">Wedges</span>
         </Card>
         <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
           <Image
@@ -70,7 +66,7 @@ export default function Category() {
             }}
             width="160"
           />
-          <span className="text-lg font-semibold">Accessories</span>
+          <span className="text-lg font-semibold">Putters</span>
         </Card>
       </div>
     </div>
