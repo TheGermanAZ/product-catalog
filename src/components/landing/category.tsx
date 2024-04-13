@@ -14,7 +14,7 @@ export default function Category() {
       <div className="grid grid-cols-4 gap-4">
         <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
           <Image
-            alt="New Arrivals"
+            alt="Woods"
             className="mb-4"
             height="160"
             src="/placeholder.svg"
@@ -28,7 +28,7 @@ export default function Category() {
         </Card>
         <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
           <Image
-            alt="Productivity"
+            alt="Irons"
             className="mb-4"
             height="160"
             src="/placeholder.svg"
@@ -42,7 +42,7 @@ export default function Category() {
         </Card>
         <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
           <Image
-            alt="Workspace"
+            alt="Wedges"
             className="mb-4"
             height="160"
             src="/placeholder.svg"
@@ -56,7 +56,7 @@ export default function Category() {
         </Card>
         <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
           <Image
-            alt="Accessories"
+            alt="Putters"
             className="mb-4"
             height="160"
             src="/placeholder.svg"
