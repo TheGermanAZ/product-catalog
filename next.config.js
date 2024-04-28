@@ -12,7 +12,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "m.media-amazon.com",
         port: "",
-        pathname: "/account123/**",
+        pathname: "/images/I/**",
       },
     ],
   },

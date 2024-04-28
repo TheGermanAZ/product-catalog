@@ -33,7 +33,6 @@ export default async function Category() {
             <span className="text-lg font-semibold">{item.title}</span>
           </Card>
         ))}
-        ));
       </div>
     </div>
   );
