@@ -14,19 +14,19 @@ export default async function Category() {
         </Link>
       </div>
       <div className="grid grid-cols-4 gap-4">
-        {homeData.map((item, index) => (
+        {homeData.map((item) => (
           <Card
-            key={index}
+            key={item.id}
             className="w-[220px] bg-gray-100 p-4 flex flex-col items-center"
           >
             <Image
               alt={item.title}
-              className="mb-4"
+              className="mb-4 w-48"
               height="160"
               src={item.imageRef}
               style={{
                 aspectRatio: "160/160",
-                objectFit: "cover",
+                objectFit: "contain",
               }}
               width="160"
             />

@@ -1,7 +1,6 @@
 import Bag from "@/components/landing/bag";
 import Category from "@/components/landing/category";
 import { Footer } from "@/components/landing/footer";
-import { Navbar } from "@/components/landing/navbar";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Suspense } from "react";
@@ -9,7 +8,6 @@ import { Suspense } from "react";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main>
         <div className="relative bg-gray-900">
           {/* Decorative image and overlay */}

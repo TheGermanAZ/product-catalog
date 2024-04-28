@@ -22,27 +22,27 @@ export interface MainNavProps {
 const components: { title: string; href: string }[] = [
   {
     title: "Drivers",
-    href: "/clubs/drivers",
+    href: "/clubs",
   },
   {
     title: "Fairway Woods",
-    href: "/clubs/fairway-woods",
+    href: "/clubs",
   },
   {
     title: "Hybrids",
-    href: "/clubs/hybrids",
+    href: "/clubs",
   },
   {
     title: "Irons",
-    href: "/clubs/irons",
+    href: "/clubs",
   },
   {
     title: "Wedges",
-    href: "/clubs/wedges",
+    href: "/clubs",
   },
   {
     title: "Putters",
-    href: "/clubs/putters",
+    href: "/clubs",
   },
 ];
 
