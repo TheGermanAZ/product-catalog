@@ -4,6 +4,7 @@ import { Footer } from "@/components/landing/footer";
 import { Navbar } from "@/components/landing/navbar";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -42,7 +43,9 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <Category />
+        <Suspense>
+          <Category />
+        </Suspense>
         <Bag />
       </main>
       <Footer />

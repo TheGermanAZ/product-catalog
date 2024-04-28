@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import { getHomeData } from "../../../server/db/queries";
 
-export default function Category() {
+export default async function Category() {
+  const homeData = await getHomeData();
   return (
     <div className="bg-white p-6">
       <div className="flex justify-between items-center mb-6">
@@ -12,62 +14,26 @@ export default function Category() {
         </Link>
       </div>
       <div className="grid grid-cols-4 gap-4">
-        <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
-          <Image
-            alt="Woods"
-            className="mb-4"
-            height="160"
-            src="/placeholder.svg"
-            style={{
-              aspectRatio: "160/160",
-              objectFit: "cover",
-            }}
-            width="160"
-          />
-          <span className="text-lg font-semibold">Woods</span>
-        </Card>
-        <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
-          <Image
-            alt="Irons"
-            className="mb-4"
-            height="160"
-            src="/placeholder.svg"
-            style={{
-              aspectRatio: "160/160",
-              objectFit: "cover",
-            }}
-            width="160"
-          />
-          <span className="text-lg font-semibold">Irons</span>
-        </Card>
-        <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
-          <Image
-            alt="Wedges"
-            className="mb-4"
-            height="160"
-            src="/placeholder.svg"
-            style={{
-              aspectRatio: "160/160",
-              objectFit: "cover",
-            }}
-            width="160"
-          />
-          <span className="text-lg font-semibold">Wedges</span>
-        </Card>
-        <Card className="w-[220px] bg-gray-100 p-4 flex flex-col items-center">
-          <Image
-            alt="Putters"
-            className="mb-4"
-            height="160"
-            src="/placeholder.svg"
-            style={{
-              aspectRatio: "160/160",
-              objectFit: "cover",
-            }}
-            width="160"
-          />
-          <span className="text-lg font-semibold">Putters</span>
-        </Card>
+        {homeData.map((item, index) => (
+          <Card
+            key={index}
+            className="w-[220px] bg-gray-100 p-4 flex flex-col items-center"
+          >
+            <Image
+              alt={item.title}
+              className="mb-4"
+              height="160"
+              src={item.imageRef}
+              style={{
+                aspectRatio: "160/160",
+                objectFit: "cover",
+              }}
+              width="160"
+            />
+            <span className="text-lg font-semibold">{item.title}</span>
+          </Card>
+        ))}
+        ));
       </div>
     </div>
   );
