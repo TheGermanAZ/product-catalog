@@ -2,6 +2,7 @@ import React from "react";
 import { getAllListings } from "../../../server/db/queries";
 import Image from "next/image";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Link } from "lucide-react";
 
 const page = async () => {
   const allListings = await getAllListings();
@@ -15,24 +16,28 @@ const page = async () => {
           {allListings.map((item) => (
             <Card
               key={item.id}
-              className="w-[220px] bg-gray-100 p-4 flex flex-col items-center"
+              className="w-[220px] bg-white-100 p-4 flex flex-col items-center shadow hover:shadow-lg md:cursor-pointer"
             >
-              <CardContent className=" w-48">
-                <Image
-                  alt={item.title}
-                  className="h-48 w-48"
-                  height="160"
-                  src={item.imageRef}
-                  style={{
-                    aspectRatio: "160/160",
-                    objectFit: "contain",
-                  }}
-                  width="160"
-                />
-              </CardContent>
-              <CardTitle className="text-lg font-semibold">
-                {item.title}
-              </CardTitle>
+              <Link href={`/clubs/${item.id}`}>
+                <CardContent className=" w-48">
+                  <Image
+                    alt={item.title}
+                    className="h-48 w-48"
+                    height="160"
+                    src={item.imageRef}
+                    style={{
+                      aspectRatio: "160/160",
+                      objectFit: "contain",
+                    }}
+                    width="160"
+                  />
+                </CardContent>
+                <CardTitle className="text-lg font-semibold">
+                  {item.title.length > 30
+                    ? item.title.slice(0, 30) + "..."
+                    : item.title}
+                </CardTitle>
+              </Link>
             </Card>
           ))}
         </div>
