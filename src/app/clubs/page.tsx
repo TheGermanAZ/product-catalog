@@ -2,7 +2,7 @@ import React from "react";
 import { getAllListings } from "../../../server/db/queries";
 import Image from "next/image";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 const page = async () => {
   const allListings = await getAllListings();
@@ -18,7 +18,7 @@ const page = async () => {
               key={item.id}
               className="w-[220px] bg-white-100 p-4 flex flex-col items-center shadow hover:shadow-lg md:cursor-pointer"
             >
-              <Link href={`/clubs/${item.id}`}>
+              <Link href={`/clubs/${item.title}`}>
                 <CardContent className=" w-48">
                   <Image
                     alt={item.title}
