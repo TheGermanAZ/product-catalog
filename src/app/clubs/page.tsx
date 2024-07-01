@@ -4,8 +4,9 @@ import Image from "next/image";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 
-const page = async () => {
+const clubs = async () => {
   const allListings = await getAllListings();
+
   return (
     <main>
       <div className="bg-white p-6">
@@ -18,7 +19,9 @@ const page = async () => {
               key={item.id}
               className="w-[220px] bg-white-100 p-4 flex flex-col items-center shadow hover:shadow-lg md:cursor-pointer"
             >
-              <Link href={`/clubs/${item.title}`}>
+              <Link
+                href={`/clubs/${item.title.split(" ").join("-")}_${item.id}`}
+              >
                 <CardContent className=" w-48">
                   <Image
                     alt={item.title}
@@ -46,4 +49,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default clubs;
